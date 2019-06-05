@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "AirPods",
+        "brand": "Apple",
+        "image": "/img/shopping/aripods.jpg",
+        "sales": 10000,
+        "cost": 1288,
+        "color": "白色"
+    },
+    {
+        "id": 2,
+        "name": "奥多金 无线蓝牙耳机",
+        "brand": "Beats",
+        "image": "/img/shopping/5ce4ee24Ne8e6a19d.jpg",
+        "sales": 11000,
+        "cost": 1188,
+        "color": "白色"
+    },
+    {
+        "id": 3,
+        "name": "AKG Y20U入耳式耳机",
+        "brand": "Beats",
+        "image": "/img/shopping/5b0bf761N172a4178.jpg",
+        "sales": 5000,
+        "cost": 2288,
+        "color": "金色"
+    },
+    {
+        "id": 4,
+        "name": "JBL GO2 音乐金砖二代 便携式蓝牙音箱",
+        "brand": "Beats",
+        "image": "/img/shopping/262642958bbd48e7.jpg",
+        "sales": 3000,
+        "cost": 1888,
+        "color": "红色"
+    },
+    {
+        "id": 5,
+        "name": "索尼（SONY）智能蓝牙音箱LF-S80D",
+        "brand": "SONY",
+        "image": "/img/shopping/5b0f6b8dNd335a77e.jpg",
+        "sales": 8000,
+        "cost": 1578,
+        "color": "白色"
+    },
+    {
+        "id": 6,
+        "name": "I5 手机耳机有线入耳",
+        "brand": "Beats",
+        "image": "/img/shopping/59561105N4da78fd5.jpg",
+        "sales": 12000,
+        "cost": 1488,
+        "color": "金色"
+    },
+    {
+        "id": 7,
+        "name": "魔卡师（mocrox）戴摩斯 手机耳机有线 ",
+        "brand": "Beats",
+        "image": "/img/shopping/1e79ca338a898858.jpg",
+        "sales": 25000,
+        "cost": 788,
+        "color": "蓝色"
+    },
+    {
+        "id": 8,
+        "name": "JBL PULSE2 音乐脉动二代 便携式蓝牙音箱",
+        "brand": "B&O",
+        "image": "/img/shopping/5a03ec48N9ac2e758.jpg",
+        "sales": 15000,
+        "cost": 1898,
+        "color": "金色"
+    },
+    {
+        "id": 9,
+        "name": "维肯 手机耳机适用华为OPPO",
+        "brand": "Bose",
+        "image": "/img/shopping/1ce2fcc0d80a58b8.jpg",
+        "sales": 14000,
+        "cost": 2878,
+        "color": "蓝色"
+    },
+    {
+        "id": 10,
+        "name": "头戴式耳机 升级版",
+        "brand": "B&O",
+        "image": "/img/shopping/5852005eNebfa86ed.jpg",
+        "sales": 9000,
+        "cost": 2298,
+        "color": "金色"
+    }
+]

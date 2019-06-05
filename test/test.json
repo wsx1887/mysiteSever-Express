@@ -1,0 +1,193 @@
+{
+    "code": 0,
+    "data": {
+        "state": "completed",
+        "title": "190428 트와이스(TWICE) 사나(SANA) - Dance The Night Away(댄나) @광주 Super Concert 직캠(FANCAM) BY 땀맨(SweatMan)",
+        "thumbnail": "https://i.ytimg.com/vi/9o7uUWHzpy4/maxresdefault.jpg",
+        "duration": 200,
+        "music": 1,
+        "formats": [
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&itag=249&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=audio%2Fwebm&gir=yes&clen=1268722&dur=200.221&lmt=1556557835713900&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2201222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Citag%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=941A8C5389C597B7D596EA4A79E83C4949C4C255.6D92998EC337C8A31F4D5799FC500265C5710F0E&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "none",
+                "acodec": "opus",
+                "ext": "webm",
+                "height": 0,
+                "abr": 50,
+                "filesize": 1268722
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&itag=250&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=audio%2Fwebm&gir=yes&clen=1671718&dur=200.221&lmt=1556557832918919&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2201222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Citag%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=D8A1FF93139A19C949F143699B2B3556E4517570.265F93EBA97CFA9815BF954742A35ACFEF36C280&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "none",
+                "acodec": "opus",
+                "ext": "webm",
+                "height": 0,
+                "abr": 70,
+                "filesize": 1671718
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&itag=171&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=audio%2Fwebm&gir=yes&clen=2935021&dur=200.191&lmt=1556557834618812&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2201222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Citag%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=C7F7A6A46699324C8ABB4FB92A034A80BB7ACB11.C0250F8EAED47A94C59131C6CA978049D2FD2E64&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "none",
+                "acodec": "vorbis",
+                "ext": "webm",
+                "height": 0,
+                "abr": 128,
+                "filesize": 2935021
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&itag=140&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=audio%2Fmp4&gir=yes&clen=3241602&dur=200.248&lmt=1556556116591438&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2201222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Citag%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=2634BC5500B7727F5DA957A207E5292B00F5C0AC.9CFFCA1FBA4A3D893061B8BE72751F5B2FC84E32&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "none",
+                "acodec": "mp4a.40.2",
+                "ext": "m4a",
+                "height": 0,
+                "abr": 128,
+                "filesize": 3241602
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&itag=251&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=audio%2Fwebm&gir=yes&clen=3276335&dur=200.221&lmt=1556557834825881&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2201222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Citag%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=20CAF4410BF1B3A11B1E0B611E6931CB0185E32C.A0914002BE00A10F5BC2C5D146BC458838115D87&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "none",
+                "acodec": "opus",
+                "ext": "webm",
+                "height": 0,
+                "abr": 160,
+                "filesize": 3276335
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C278%2C313&itag=160&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=video%2Fmp4&gir=yes&clen=1300827&dur=200.199&lmt=1556556133532491&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2206222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Caitags%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=3F91B24DAF1D289A02029CC7021E84F751BAD933.CC6A9E72008E640CC703F5CD017FA51800803DA5&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "avc1.4d400b",
+                "acodec": "none",
+                "ext": "mp4",
+                "height": 144,
+                "abr": 0,
+                "filesize": 1300827
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C278%2C313&itag=278&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=video%2Fwebm&gir=yes&clen=1444311&dur=200.200&lmt=1556556157586453&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2206222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Caitags%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=249C78E7D446B60A8E44A67844E68B60B850A546.8D67F0CD037BD98BD98A6D051B21AAF0F1C85566&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "vp9",
+                "acodec": "none",
+                "ext": "webm",
+                "height": 144,
+                "abr": 0,
+                "filesize": 1444311
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C278%2C313&itag=133&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=video%2Fmp4&gir=yes&clen=2562081&dur=200.199&lmt=1556556133532489&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2206222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Caitags%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=5CB5BD3286F7309557E0F9329F09D907EC93E13F.526BF6CC085964132E4F3042873FB74AD0DF31D2&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "avc1.4d400c",
+                "acodec": "none",
+                "ext": "mp4",
+                "height": 240,
+                "abr": 0,
+                "filesize": 2562081
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C278%2C313&itag=242&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=video%2Fwebm&gir=yes&clen=2897807&dur=200.200&lmt=1556556157583321&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2206222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Caitags%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=ED5F6BCC5E011C99F7B57C25902BCCBC7B7B104B.EF49F412D909A456EB5EE21C4796FAB810117A33&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "vp9",
+                "acodec": "none",
+                "ext": "webm",
+                "height": 240,
+                "abr": 0,
+                "filesize": 2897807
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C278%2C313&itag=134&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=video%2Fmp4&gir=yes&clen=4917329&dur=200.199&lmt=1556556133532430&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2206222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Caitags%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=C5803D6F6C909330F71BD7E944A61ADD33E030CC.EEE13F77AE4686FDC4BDF8EA5B4E851C6723C7E3&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "avc1.4d400d",
+                "acodec": "none",
+                "ext": "mp4",
+                "height": 360,
+                "abr": 0,
+                "filesize": 4917329
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C278%2C313&itag=243&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=video%2Fwebm&gir=yes&clen=6143956&dur=200.200&lmt=1556556157592518&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2206222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Caitags%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=33FEBC7C57CD943F64BF68AFE27C0AF0D3F0D614.4919B63FBE8B9D16CCD25CD2ACD4634771307F81&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "vp9",
+                "acodec": "none",
+                "ext": "webm",
+                "height": 360,
+                "abr": 0,
+                "filesize": 6143956
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C278%2C313&itag=135&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=video%2Fmp4&gir=yes&clen=8746623&dur=200.199&lmt=1556556133534795&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2206222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Caitags%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=2E91AD03EBE2078663EC4FE9B15943C3E1B07BF6.065746BB8B958F0CFEAE10BD717BC3355106C4C9&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "avc1.4d4015",
+                "acodec": "none",
+                "ext": "mp4",
+                "height": 480,
+                "abr": 0,
+                "filesize": 8746623
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C278%2C313&itag=244&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=video%2Fwebm&gir=yes&clen=8372452&dur=200.200&lmt=1556556157589370&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2206222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Caitags%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=50C94D884C8F125C4CFAE207528446B1AFDF5EA7.91E760410D1C14C8F3F20AC5E055EA3D427ED811&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "vp9",
+                "acodec": "none",
+                "ext": "webm",
+                "height": 480,
+                "abr": 0,
+                "filesize": 8372452
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C278%2C313&itag=136&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=video%2Fmp4&gir=yes&clen=17413675&dur=200.199&lmt=1556556133530180&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2206222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Caitags%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=379848930CB150DACA6A667E165E6DDFAA983C7C.60501E5158DC13FB3CFE24D3183C5BE167C8BB00&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "avc1.4d401e",
+                "acodec": "none",
+                "ext": "mp4",
+                "height": 720,
+                "abr": 0,
+                "filesize": 17413675
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C278%2C313&itag=247&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=video%2Fwebm&gir=yes&clen=17276989&dur=200.200&lmt=1556556157589874&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2206222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Caitags%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=EEC176A5138AAF23EDBD2722CEAC40F73062B5CC.40304363AF68D110502B5AF1343C2E1ED0511E13&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "vp9",
+                "acodec": "none",
+                "ext": "webm",
+                "height": 720,
+                "abr": 0,
+                "filesize": 17276989
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C278%2C313&itag=137&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=video%2Fmp4&gir=yes&clen=34915821&dur=200.199&lmt=1556556133536858&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2206222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Caitags%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=E1ACC5BDC8A4F03A650FB068393366EB253A8A63.2210699B39A89153F4FBB8E0429FA75BE7BD6D72&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "avc1.64001f",
+                "acodec": "none",
+                "ext": "mp4",
+                "height": 1080,
+                "abr": 0,
+                "filesize": 34915821
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C278%2C313&itag=248&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=video%2Fwebm&gir=yes&clen=32179890&dur=200.200&lmt=1556556157582144&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2206222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Caitags%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=E9EC938059EF98A8E0A96FB715E7CC59DC3211CF.4A9323E01E62B3D729ACB3D69BB821A6B8CF1477&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "vp9",
+                "acodec": "none",
+                "ext": "webm",
+                "height": 1080,
+                "abr": 0,
+                "filesize": 32179890
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C278%2C313&itag=271&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=video%2Fwebm&gir=yes&clen=76939602&dur=200.200&lmt=1556556157583126&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2206222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Caitags%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=6C787676E34730DB14302109E4CBD2D0E4891B8D.EBD98B7978C37ECAB144940EB6F708EB8ED1CA2B&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "vp9",
+                "acodec": "none",
+                "ext": "webm",
+                "height": 1440,
+                "abr": 0,
+                "filesize": 76939602
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&aitags=133%2C134%2C135%2C136%2C137%2C160%2C242%2C243%2C244%2C247%2C248%2C271%2C278%2C313&itag=313&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=video%2Fwebm&gir=yes&clen=109766121&dur=200.200&lmt=1556556157576588&mt=1558882099&fvip=2&keepalive=yes&c=WEB&txp=2206222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Caitags%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cdur%2Clmt&key=yt8&signature=7FCF8D872E695C03EA4269A8401C842D342F8E29.7CE669F556499CC1131C94D658AD723193AFF1AA&ratebypass=yes&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "vp9",
+                "acodec": "none",
+                "ext": "webm",
+                "height": 1920,
+                "abr": 0,
+                "filesize": 109766121
+            },
+            {
+                "url": "https://redirector.googlevideo.com/videoplayback?id=o-AD8lpX2PDxyyNza68Ub0JgfG1GVlG3DEaYOjX9o-7SSJ&itag=18&source=youtube&requiressl=yes&mm=31%2C26&mn=sn-ab5szn7z%2Csn-tt1eln7e&ms=au%2Conr&mv=m&pl=23&ei=wKfqXJqRKqzwhwagoI0Q&initcwndbps=145000&mime=video%2Fmp4&gir=yes&clen=18106408&ratebypass=yes&dur=200.248&lmt=1556555784020255&mt=1558882099&fvip=2&c=WEB&txp=2211222&ip=134.209.70.68&ipbits=0&expire=1558903840&sparams=ip%2Cipbits%2Cexpire%2Cid%2Citag%2Csource%2Crequiressl%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Cei%2Cinitcwndbps%2Cmime%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&key=yt8&signature=233320F6D666E8D8499814E567BC9DE43B2CFEC0.D2E9434CA55534D293954E410B26712EEDEF8F75&title=190428%20%ED%8A%B8%EC%99%80%EC%9D%B4%EC%8A%A4(TWICE)%20%EC%82%AC%EB%82%98(SANA)%20-%20Dance%20The%20Night%20Away(%EB%8C%84%EB%82%98)%20@%EA%B4%91%EC%A3%BC%20Super%20Concert%20%EC%A7%81%EC%BA%A0(FANCAM)%20BY%20%EB%95%80%EB%A7%A8(SweatMan)",
+                "vcodec": "avc1.42001E",
+                "acodec": "mp4a.40.2",
+                "ext": "mp4",
+                "height": 360,
+                "abr": 96,
+                "filesize": 18106408
+            }
+        ]
+    },
+    "message": "success"
+}
