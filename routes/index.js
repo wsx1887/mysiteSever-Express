@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index.html', { title: 'Express' });
 });
 router.get("/zhihuribao",function(req,res,next){
   res.render("知乎日报网页版.html");
