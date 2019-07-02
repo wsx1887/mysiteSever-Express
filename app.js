@@ -3,7 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var compression=require('compression')
+var compression=require('compression');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -26,9 +26,11 @@ app.all('',function(req,res,next){
   }
 });*/
 app.set('views', path.join(__dirname, 'views'));
+//支持静态html
 app.engine('html',require('ejs').renderFile);
 app.set('view engine', 'ejs');
 
+//启用压缩
 app.use(compression())
 app.use(logger('dev'));
 app.use(express.json());
