@@ -10,6 +10,9 @@ router.get("/zhihuribao",function(req,res,next){
 });
 router.get('/shopping/?*?',function(req,res,next){
 res.render('电商网站实例.html');
-})
+});
+router.get('/vueapp/?*?',function(req,res,next){
+  res.render('个人练习VUE版.html');
+  })
 
 module.exports = router;
