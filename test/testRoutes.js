@@ -3,6 +3,9 @@ var router=express.Router();
 var http=require('http');
 
 router.get('/',function(req,res,next){
+    res.send('此链接用于测试');
+})
+router.get('/chlodmanonTest',function(req,res,next){
     var goodUrl='http://chlodmanon.com/product/fggggggg/18';
     var badUrl='http://chlodmanon.com/product/fggggggg/17';
     var goodOption={
@@ -25,6 +28,11 @@ router.get('/',function(req,res,next){
     goodReq.end();
     //console.log('发送完成');
     //res.json({goodUrl,badUrl});
+});
+router.all('/getreq',function(req,res,next){
+    //res.append("access-control-allow-origin","*");
+    //console.log(req);
+    //console.log(Object.keys(req.body));
+    res.send(req.body);
 })
-
 module.exports=router;
