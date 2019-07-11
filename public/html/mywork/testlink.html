@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>链接测试</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="input-group">
+            <label for="baselink">替换链接：</label>
+            <input type="text" placeholder="用星号*作为替换符" id="baselink" />
+        </div>
+        <div class="input-group">
+            <label for="startnumber">开头的数字：</label>
+            <input type="number" placeholder="只限数字" id="startnumber" />
+        </div>
+        <div class="input-group">
+            <label for="endnumber">结尾的数字：</label>
+            <input type="number" id="endnumber" placeholder="只限数字" />
+        </div>
+        <div class="input-group">
+            <button class="replace">替换</button>
+        </div>
+        <section>
+            <textarea name="textarea-notest" id="notest" cols="30" rows="10" placeholder="等待测试的链接"></textarea>
+            <button class="test">提交测试</button>
+        </section>
+        <section>
+            <textarea name="textarea-havetest" id="havetest" cols="30" rows="10" placeholder="存活的链接"></textarea>
+        </section>
+        <section>
+            <textarea name="textarea-foropen" id="foropen" cols="30" rows="10"></textarea>
+            <button class="open">批量打开</button>
+        </section>
+    </div>
+    <script src="../../myJS/axios/axios.0.19.0.min.js"></script>
+    <script>
+        document.querySelector(".open").addEventListener("click", event => {
+
+            ['http://chlodmanon.com/product/fggggggg/20',
+                'http://chlodmanon.com/product/fggggggg/21',
+                'http://chlodmanon.com/product/fggggggg/22'].forEach(value => {
+                    window.open(value);
+
+                })
+        }, false);
+    </script>
+</body>
+
+</html>

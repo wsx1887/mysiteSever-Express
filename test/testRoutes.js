@@ -14,10 +14,16 @@ router.get('/chlodmanonTest',function(req,res,next){
         timeout:3000
     }
     //res.set('content-type',"text/html; charset=utf-8");
-    const goodReq=http.request(goodOption,(goodRes)=>{
+    const goodReq=http.request(goodOption,(myResponse)=>{
         //console.log(`响应码：${goodRes.statusCode}`);
         //console.log(`请求头：${JSON.stringify(goodRes.headers)}`);
-        goodRes.destroy();
+        if(myResponse.statusCode===200){
+            res.send('商品链接存在！');
+        }
+        else{
+            res.send('商品链接不存在。');
+        }
+        myResponse.destroy();
     })
     goodReq.on('error',(err)=>{
         console.log(err);
