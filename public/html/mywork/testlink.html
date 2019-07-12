@@ -26,7 +26,9 @@
             <button class="replace">替换</button>
         </div>
         <section>
-            <textarea name="textarea-notest" id="notest" cols="30" rows="10" placeholder="等待测试的链接"></textarea>
+            <textarea name="textarea-notest" id="notest" cols="30" rows="10" placeholder="等待测试的链接 例：
+http://test.com/1
+http://test.com/2"></textarea>
             <button class="test">提交测试</button>
         </section>
         <section>
@@ -39,6 +41,7 @@
     </div>
     <script src="../../myJS/axios/axios.0.19.0.min.js"></script>
     <script>
+        //批量打开按钮
         document.querySelector(".open").addEventListener("click", event => {
 
             ['http://chlodmanon.com/product/fggggggg/20',
@@ -47,6 +50,19 @@
                     window.open(value);
 
                 })
+        }, false);
+        //提交测试按钮
+        document.querySelector(".test").addEventListener("click", event => {
+            let str=document.getElementById("notest").value;
+            let urlArray=str.split("\n");
+            let t="tst"
+            //test
+            urlArray=["http://chlodmanon.com/product/fggggggg/20","http://chlodmanon.com/product/fggggggg/16","http://chlodmanon.com/product/fggggggg/21"]
+            axios.post('/api/mywork/testlink',urlArray).then(res=>{
+                if(res.data.length>0){
+                    document.getElementById("havetest").value=res.data.join("\n");
+                }
+            });
         }, false);
     </script>
 </body>

@@ -1,7 +1,12 @@
 var router = require('express').Router();
 
-router.post('/testlink', (req, res, next) => {
+var Testlink=require('./methods/testlink.js');
 
+router.post('/testlink', (req, res, next) => {
+    if (req.body instanceof Array && req.body.length > 0) {
+        Testlink(['http://chlodmanon.com/product/fggggggg/18']);
+    }
+    res.send(['return']);
 });
 
 
