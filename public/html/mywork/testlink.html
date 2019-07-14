@@ -28,7 +28,8 @@
         <section>
             <textarea name="textarea-notest" id="notest" cols="30" rows="10" placeholder="等待测试的链接 例：
 http://test.com/1
-http://test.com/2"></textarea>
+http://test.com/2
+暂时对https安全链接不友好"></textarea>
             <button class="test">提交测试</button>
         </section>
         <section>
@@ -43,10 +44,8 @@ http://test.com/2"></textarea>
     <script>
         //批量打开按钮
         document.querySelector(".open").addEventListener("click", event => {
-
-            ['http://chlodmanon.com/product/fggggggg/20',
-                'http://chlodmanon.com/product/fggggggg/21',
-                'http://chlodmanon.com/product/fggggggg/22'].forEach(value => {
+			let urlArray=document.getElementById("foropen").value.split("\n").filter(item=>item!="");
+				urlArray.forEach(value => {
                     window.open(value);
 
                 })
@@ -54,16 +53,27 @@ http://test.com/2"></textarea>
         //提交测试按钮
         document.querySelector(".test").addEventListener("click", event => {
             let str=document.getElementById("notest").value;
-            let urlArray=str.split("\n");
-            let t="tst"
-            //test
-            urlArray=["http://chlodmanon.com/product/fggggggg/20","http://chlodmanon.com/product/fggggggg/16","http://chlodmanon.com/product/fggggggg/21"]
+            let urlArray=str.split("\n").filter(item=>item!="");
             axios.post('/api/mywork/testlink',urlArray).then(res=>{
+				let havetestArea=document.getElementById("havetest");
                 if(res.data.length>0){
-                    document.getElementById("havetest").value=res.data.join("\n");
-                }
+                    havetestArea.value=res.data.join("\n");
+                }else{
+					havetestArea.value='无存活链接';
+				}
             });
         }, false);
+		//替换按钮
+		document.querySelector(".replace").addEventListener("click",event=>{
+			let baselink=document.getElementById("baselink").value;
+			let startNumber=Number(document.getElementById("startnumber").value);
+			let endNumber=Number(document.getElementById("endnumber").value);
+			let resultString="";
+			for(let i=startNumber;i<=endNumber;i++){
+				resultString+=baselink.replace("*",i)+"\n";
+			}
+			document.getElementById("notest").value=resultString;
+		});
     </script>
 </body>
 

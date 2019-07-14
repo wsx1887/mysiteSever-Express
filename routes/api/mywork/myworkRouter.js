@@ -1,12 +1,15 @@
 var router = require('express').Router();
 
-var Testlink=require('./methods/testlink.js');
+var testlinkArray=require('./methods/testlink.js');
 
-router.post('/testlink', (req, res, next) => {
+router.post('/testlink',async function(req, res, next) {
+    let results=[];
     if (req.body instanceof Array && req.body.length > 0) {
-        Testlink(['http://chlodmanon.com/product/fggggggg/18']);
+        //console.log(req.body);
+        results=await testlinkArray(req.body.filter(item=>item!=""));
     }
-    res.send(['return']);
+    //console.log(results);
+    res.send(results);
 });
 
 
