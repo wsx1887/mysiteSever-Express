@@ -1,6 +1,7 @@
-var mongoose = require('../../common/vueappConnection.js');
+var connection = require('../../common/vueappConnection.js');
+var mongoose=require('mongoose');
 
-var userSchema = new mongoose.Schema({
+var userSchema = new mongoose.Schema ({
     name: String,
     passWord: String,
     mail: String,
@@ -12,6 +13,6 @@ var userSchema = new mongoose.Schema({
     answer:String
 });
 
-var userModel=mongoose.model('user',userSchema);
+var userModel=connection.model('user',userSchema);
 
 module.exports=userModel;
