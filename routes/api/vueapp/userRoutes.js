@@ -26,7 +26,7 @@ router.post('/join', function (req, res, next) {
         userModel.find({ name: joinDate.name }, function (err, tank) {
             if (err) {
                 console.log(err);
-                res.status(200).send({ message: '数据库错误，请稍候重试', joinType: 1 });
+                res.status(200).send({ message: '数据库错误，请稍后重试', joinType: 1 });
             } else if (tank.length != 0) {
                 res.status(200).send({ message: '用户名已存在', joinType: 1 });
             } else {
@@ -45,7 +45,7 @@ router.post('/join', function (req, res, next) {
                 registerUser.save(function (err) {
                     if (err) {
                         console.log(err);
-                        res.status(200).send({ message: '数据库错误，请稍候重试', joinType: 1 });
+                        res.status(200).send({ message: '数据库错误，请稍后重试', joinType: 1 });
                     } else {
                         res.status(200).send({ message: '注册成功', joinType: 0 });
                     }
