@@ -10,30 +10,48 @@
         *{
             box-sizing: border-box;
         }
+        body{
+            padding: 0;
+            margin: 0;
+        }
         .content{
-            padding-left: 225px;
-            margin: 5px 3% 7%;
+            padding-left: 15em;
+            background-color: rgba(232,227,228,1.00);
         }
     #menu{
+        list-style-type: none;
         position:fixed;
         margin: 0;
-        left: 30px;
-        padding: 0 10px 0 0;
+        left: 2em;
+        padding: 1em 0 0 1em;
         text-align:left;
         font-size:13px;
         overflow-y:auto;
+         max-height: calc(100vh - 1em);
+        max-width: 15em;
     }
-        ul{
-            
+        #menu ul{
+            list-style-type: none;
+            padding-left: 1em;
         }
-        #api-doc{
-            
+        h1{
+            font-size: 2em;
+            padding-top: .5em;
+            margin: 0;
+        }
+        table{
+            border-collapse: collapse;
+        }
+        table td,
+        table th{
+            border:solid 1px rgba(88,88,88,1.00);
+            border-collapse: collapse;
         }
     </style>
 </head>
 <body>
     <section class="content">
-    <ul id="menu" style="height: 613px;">
+    <ul id="menu">
         <li id="express-api"><a href="#express" class="active">express()</a>
             <ul id="express-menu" class="active">
                 <li><em>Methods</em></li>
@@ -291,7 +309,7 @@
 
             <p>
 
-                这是Express中的内置中间件功能。
+                这是Express中的内置中间件函数。
                 它使用JSON有效负载解析传入的请求，并基于
 
                 <a href="/en/resources/middleware/body-parser.html">
@@ -480,7 +498,7 @@
                         </td>
                         <td>
 
-                            功能
+                            函数
 
                         </td>
                         <td><code>null</code></td>
@@ -576,7 +594,7 @@
                         </td>
                         <td>
 
-                            功能
+                            函数
 
                         </td>
                         <td><code>undefined</code></td>
@@ -595,7 +613,7 @@
 
             <p>
 
-                这是Express中的内置中间件功能。
+                这是Express中的内置中间件函数。
                 它提供静态文件，基于
                 <a href="/en/resources/middleware/serve-static.html">
 
@@ -717,11 +735,7 @@
                             串
 
                         </td>
-                        <td>
-
-                            “忽视”
-
-                        </td>
+                        <td>“ignore”</td>
                     </tr>
                     <tr>
                         <td><code>etag</code></td>
@@ -839,11 +853,7 @@
                             杂
 
                         </td>
-                        <td>
-
-                            “的index.html”
-
-                        </td>
+                        <td>“index.html”</td>
                     </tr>
                     <tr>
                         <td><code>lastModified</code></td>
@@ -869,13 +879,9 @@
                         <td>
 
                             设置Cache-Control标头的max-age属性（以毫秒为单位）或字符串（以
-                            <a href="https://www.npmjs.org/package/ms">
+                            <a href="https://www.npmjs.org/package/ms">ms格式</a>
 
-                                ms格式）
-
-                            </a>
-
-                            。
+                            ）。
 
                         </td>
                         <td>
@@ -907,7 +913,7 @@
                         <td><code>setHeaders</code></td>
                         <td>
 
-                            用于设置HTTP标头以与文件一起提供的功能。
+                            用于设置HTTP标头以与文件一起提供的函数。
                             <br><br>
 
                             请参阅
@@ -923,7 +929,7 @@
                         </td>
                         <td>
 
-                            功能
+                            函数
 
                         </td>
                         <td>&nbsp;</td>
@@ -1060,7 +1066,7 @@
 
             <p>
 
-                该功能的签名是：
+                该函数的签名是：
 
             </p>
 
@@ -1116,7 +1122,7 @@
 
                 精心设计的选项对象
                 的
-                中间件功能
+                中间件函数
                 的示例
                 ：
 
@@ -1302,7 +1308,7 @@
 
             <p>
 
-                这是Express中的内置中间件功能。
+                这是Express中的内置中间件函数。
                 它使用urlencoded有效负载解析传入的请求，并基于
                 <a href="/en/resources/middleware/body-parser.html">
 
@@ -1601,7 +1607,7 @@
                         </td>
                         <td>
 
-                            功能
+                            函数
 
                         </td>
                         <td><code>undefined</code></td>
@@ -2037,7 +2043,7 @@
 
             </h4>
 
-            <table class="doctable" border="1" style="padding-left: 20px;">
+            <table class="doctable">
                 <tbody>
                     <tr>
                         <th>
@@ -2121,7 +2127,7 @@
                             <ul>
                                 <li>
 
-                                    中间件功能。
+                                    中间件函数。
 
                                 </li>
                                 <li>
@@ -2131,7 +2137,7 @@
                                 </li>
                                 <li>
 
-                                    一系列中间件功能。
+                                    一系列中间件函数。
 
                                 </li>
                                 <li>
@@ -2169,7 +2175,7 @@
 
                                 </a>
 
-                                实现了中间件接口，您可以像使用任何其他中间件功能一样使用它们。
+                                实现了中间件接口，您可以像使用任何其他中间件函数一样使用它们。
 
 
                             </p>
@@ -2253,7 +2259,7 @@
 
             <p>
 
-                另一个例子是白名单的“全局”功能。
+                另一个例子是白名单的“全局”函数。
                 该示例与上面的示例类似，但它仅限制以“/ api”开头的路径：
 
             </p>
@@ -2290,7 +2296,7 @@
 
             </h4>
 
-            <table class="doctable" border="1" style="padding-left: 20px;">
+            <table class="doctable">
                 <tbody>
                     <tr>
                         <th>
@@ -2374,7 +2380,7 @@
                             <ul>
                                 <li>
 
-                                    中间件功能。
+                                    中间件函数。
 
                                 </li>
                                 <li>
@@ -2384,7 +2390,7 @@
                                 </li>
                                 <li>
 
-                                    一系列中间件功能。
+                                    一系列中间件函数。
 
                                 </li>
                                 <li>
@@ -2422,7 +2428,7 @@
 
                                 </a>
 
-                                实现了中间件接口，您可以像使用任何其他中间件功能一样使用它们。
+                                实现了中间件接口，您可以像使用任何其他中间件函数一样使用它们。
 
 
                             </p>
@@ -2803,7 +2809,7 @@
 
             </h4>
 
-            <table class="doctable" border="1" style="padding-left: 20px;">
+            <table class="doctable">
                 <tbody>
                     <tr>
                         <th>
@@ -2887,7 +2893,7 @@
                             <ul>
                                 <li>
 
-                                    中间件功能。
+                                    中间件函数。
 
                                 </li>
                                 <li>
@@ -2897,7 +2903,7 @@
                                 </li>
                                 <li>
 
-                                    一系列中间件功能。
+                                    一系列中间件函数。
 
                                 </li>
                                 <li>
@@ -2935,7 +2941,7 @@
 
                                 </a>
 
-                                实现了中间件接口，您可以像使用任何其他中间件功能一样使用它们。
+                                实现了中间件接口，您可以像使用任何其他中间件函数一样使用它们。
 
 
                             </p>
@@ -3159,7 +3165,7 @@
 
             </h4>
 
-            <table class="doctable" border="1" style="padding-left: 20px;">
+            <table class="doctable">
                 <tbody>
                     <tr>
                         <th>
@@ -3243,7 +3249,7 @@
                             <ul>
                                 <li>
 
-                                    中间件功能。
+                                    中间件函数。
 
                                 </li>
                                 <li>
@@ -3253,7 +3259,7 @@
                                 </li>
                                 <li>
 
-                                    一系列中间件功能。
+                                    一系列中间件函数。
 
                                 </li>
                                 <li>
@@ -3291,7 +3297,7 @@
 
                                 </a>
 
-                                实现了中间件接口，您可以像使用任何其他中间件功能一样使用它们。
+                                实现了中间件接口，您可以像使用任何其他中间件函数一样使用它们。
 
 
                             </p>
@@ -3728,7 +3734,7 @@
                 在此示例中，
                 <code>app.param(name, callback)</code>
 
-                签名保持不变，但是代替中间件回调，已定义自定义数据类型检查功能以验证用户ID的数据类型。
+                签名保持不变，但是代替中间件回调，已定义自定义数据类型检查函数以验证用户ID的数据类型。
 
             </p>
 
@@ -3862,7 +3868,7 @@
 
             </h4>
 
-            <table class="doctable" border="1" style="padding-left: 20px;">
+            <table class="doctable">
                 <tbody>
                     <tr>
                         <th>
@@ -3946,7 +3952,7 @@
                             <ul>
                                 <li>
 
-                                    中间件功能。
+                                    中间件函数。
 
                                 </li>
                                 <li>
@@ -3956,7 +3962,7 @@
                                 </li>
                                 <li>
 
-                                    一系列中间件功能。
+                                    一系列中间件函数。
 
                                 </li>
                                 <li>
@@ -3994,7 +4000,7 @@
 
                                 </a>
 
-                                实现了中间件接口，您可以像使用任何其他中间件功能一样使用它们。
+                                实现了中间件接口，您可以像使用任何其他中间件函数一样使用它们。
 
 
                             </p>
@@ -4054,7 +4060,7 @@
 
             </h4>
 
-            <table class="doctable" border="1" style="padding-left: 20px;">
+            <table class="doctable">
                 <tbody>
                     <tr>
                         <th>
@@ -4138,7 +4144,7 @@
                             <ul>
                                 <li>
 
-                                    中间件功能。
+                                    中间件函数。
 
                                 </li>
                                 <li>
@@ -4148,7 +4154,7 @@
                                 </li>
                                 <li>
 
-                                    一系列中间件功能。
+                                    一系列中间件函数。
 
                                 </li>
                                 <li>
@@ -4186,7 +4192,7 @@
 
                                 </a>
 
-                                实现了中间件接口，您可以像使用任何其他中间件功能一样使用它们。
+                                实现了中间件接口，您可以像使用任何其他中间件函数一样使用它们。
 
 
                             </p>
@@ -4450,7 +4456,7 @@
             </p>
 
             <div class="table-scroller">
-                <table class="doctable" border="1">
+                <table class="doctable">
                     <thead>
                         <tr>
                             <th id="app-settings-property">
@@ -4764,7 +4770,7 @@
                                     通过将值设置为禁用查询解析
                                     <code>false</code>
 
-                                    ，或将查询解析器设置为使用“简单”或“扩展”或自定义查询字符串解析功能。
+                                    ，或将查询解析器设置为使用“简单”或“扩展”或自定义查询字符串解析函数。
 
 
                                 </p>
@@ -5067,7 +5073,7 @@
 
                 </p>
 
-                <table class="doctable" border="1">
+                <table class="doctable">
                     <thead>
                         <tr>
                             <th>
@@ -5249,7 +5255,7 @@
                         <tr>
                             <td>
 
-                                功能
+                                函数
 
                             </td>
                             <td>
@@ -5299,7 +5305,7 @@
                 <p>
 
 
-                    ETag功能使用
+                    ETag函数使用
 
                     <a href="https://www.npmjs.org/package/etag">
 
@@ -5313,7 +5319,7 @@
 
                 </p>
 
-                <table class="doctable" border="1">
+                <table class="doctable">
                     <thead>
                         <tr>
                             <th>
@@ -5369,7 +5375,7 @@
                         <tr>
                             <td>
 
-                                功能
+                                函数
 
                             </td>
                             <td>
@@ -5422,7 +5428,7 @@
 
             </h4>
 
-            <table class="doctable" border="1" style="padding-left: 20px;">
+            <table class="doctable">
                 <tbody>
                     <tr>
                         <th>
@@ -5506,7 +5512,7 @@
                             <ul>
                                 <li>
 
-                                    中间件功能。
+                                    中间件函数。
 
                                 </li>
                                 <li>
@@ -5516,7 +5522,7 @@
                                 </li>
                                 <li>
 
-                                    一系列中间件功能。
+                                    一系列中间件函数。
 
                                 </li>
                                 <li>
@@ -5554,7 +5560,7 @@
 
                                 </a>
 
-                                实现了中间件接口，您可以像使用任何其他中间件功能一样使用它们。
+                                实现了中间件接口，您可以像使用任何其他中间件函数一样使用它们。
 
 
                             </p>
@@ -5620,7 +5626,7 @@
                 </em>
 
                 请求
-                都将执行此中间件功能
+                都将执行此中间件函数
                 ：
 
             </p>
@@ -5674,7 +5680,7 @@
 
             <p>
 
-                中间件功能是顺序执行的，因此中间件包含的顺序很重要。
+                中间件函数是顺序执行的，因此中间件包含的顺序很重要。
 
             </p>
 
@@ -5758,7 +5764,7 @@
             </p>
 
             <div class="table-scroller">
-                <table class="doctable" border="1">
+                <table class="doctable">
 
                     <thead>
                         <tr>
@@ -5895,7 +5901,7 @@
 
             <p>
 
-                下表提供了可被用作的中间件功能一些简单的例子
+                下表提供了可被用作的中间件函数一些简单的例子
                 <code>callback</code>
 
                 参数
@@ -5924,7 +5930,7 @@
 
             </p>
 
-            <table class="doctable" border="1">
+            <table class="doctable">
 
                 <thead>
                     <tr>
@@ -5950,7 +5956,7 @@
                         </td>
                         <td>
 
-                            您可以在本地定义和安装中间件功能。
+                            您可以在本地定义和安装中间件函数。
 
 
                             <pre class="  language-javascript"><code class="  language-javascript">app<span class="token punctuation">.</span><span class="token function">use<span class="token punctuation">(</span></span><span class="token keyword">function</span> <span class="token punctuation">(</span>req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next<span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -5993,7 +5999,7 @@
                         <td>
 
 
-                            您可以在同一装载路径中指定多个中间件功能。
+                            您可以在同一装载路径中指定多个中间件函数。
 
 
                             <pre class="  language-javascript"><code class="  language-javascript"><span class="token keyword">var</span> r1 <span class="token operator">=</span> express<span class="token punctuation">.</span><span class="token function">Router<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -6822,7 +6828,7 @@
 
                 </a>
 
-                的“安装”功能
+                的“安装”函数
                 将重写
                 <code>req.url</code>
 
@@ -6837,7 +6843,7 @@
 
             <p>
 
-                在中间件功能，
+                在中间件函数，
                 <code>req.originalUrl</code>
 
                 是的组合
@@ -8174,7 +8180,7 @@
                         <td><code>encode</code></td>
                         <td>
 
-                            功能
+                            函数
 
                         </td>
                         <td>
@@ -8345,7 +8351,7 @@
                 <code>encode</code>
 
                 选项允许您选择用于cookie值编码的函数。
-                不支持异步功能。
+                不支持异步函数。
 
             </p>
 
@@ -9869,11 +9875,11 @@
         <section>
             <p>
 
-                甲
+                一个
                 <code>router</code>
 
-                目的是中间件和路由的分离的实例。
-                您可以将其视为“迷你应用程序”，只能执行中间件和路由功能。
+                对象是中间件和路由的独立实例。
+                您可以将其视为“迷你应用程序”，只能执行中间件和路由函数。
                 每个Express应用程序都有一个内置的应用程序路由器。
 
             </p>
@@ -10016,7 +10022,7 @@
 
             <p>
 
-                另一个例子是白名单的“全局”功能。
+                另一个例子是白名单的“全局”函数。
                 这里的示例与之前非常相似，但它仅限制前缀为“/ api”的路径：
 
             </p>
@@ -10038,7 +10044,7 @@
                 这些
                 <code>router.METHOD()</code>
 
-                方法在Express中提供路由功能，其中METHOD是HTTP方法之一，例如GET，PUT，POST等，小写。
+                方法在Express中提供路由函数，其中METHOD是HTTP方法之一，例如GET，PUT，POST等，小写。
 
                 因此，实际的方法是
                 <code>router.get()</code>
@@ -10170,7 +10176,7 @@
                 </li>
                 <li><code>next</code>
 
-                    ，表明下一个中间件功能。
+                    ，表明下一个中间件函数。
 
                 </li>
                 <li>
@@ -10378,7 +10384,7 @@
                 在此示例中，
                 <code>router.param(name, callback)</code>
 
-                签名保持不变，但是代替中间件回调，已定义自定义数据类型检查功能以验证用户ID的数据类型。
+                签名保持不变，但是代替中间件回调，已定义自定义数据类型检查函数以验证用户ID的数据类型。
 
             </p>
 
@@ -10539,7 +10545,7 @@
 
             <p>
 
-                中间件就像一个管道管道：请求从定义的第一个中间件功能开始，并按照它们匹配的每个路径“中断”中间件堆栈处理。
+                中间件就像一个管道管道：请求从定义的第一个中间件函数开始，并按照它们匹配的每个路径“中断”中间件堆栈处理。
 
             </p>
 
@@ -10573,7 +10579,7 @@
             <p>
 
                 “mount”路径被剥离，
-                中间件功能
+                中间件函数
                 <em>
 
                     不
@@ -10581,7 +10587,7 @@
                 </em>
 
                 可见。
-                此功能的主要作用是安装的中间件功能可以在没有代码更改的情况下运行，而不管其“前缀”路径名。
+                此函数的主要作用是安装的中间件函数可以在没有代码更改的情况下运行，而不管其“前缀”路径名。
 
             </p>
 
@@ -10652,7 +10658,7 @@
 
                 </strong>
 
-                ：虽然这些中间件功能是通过一个特定的路由器加入，
+                ：虽然这些中间件函数是通过一个特定的路由器加入，
                 <em>
 
                     当

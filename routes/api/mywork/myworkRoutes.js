@@ -1,4 +1,5 @@
 var router = require('express').Router();
+var axios=require('axios');
 
 var testlinkArray=require('./methods/testlink.js');
 
@@ -11,6 +12,8 @@ router.post('/testlink',async function(req, res, next) {
     //console.log(results);
     res.send(results);
 });
+router.post('/getimgurls',async function(req,res,next){
 
+});
 
 module.exports = router;
