@@ -9,15 +9,31 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
+(function () {
     'use strict';
-    var div=document.createElement('div');
-    var button=document.createElement('input');
-    button.type='button';
-    button.value='视频另存为';
-    button.id='videosave';
-    div.appendChild(button);
-    var panel=document.querySelector('.tb-gallery');
-    panel.appendChild(div);
-        // Your code here...
-        })();
+    var div = document.createElement('div');
+    var video = document.createElement('video');
+    video.style.width = '100%';
+    video.style.height = '50px';
+    div.style.backgroundColor='rgba(139,233,97,0.80)';
+    div.appendChild(video);
+
+
+    function tmall() {
+        let videoSource = document.querySelector('.lib-video>source');
+        let playbutton = document.querySelector('.tm-video-play');
+        if (!videoSource && playbutton) {
+            playbutton.click();
+        } else {
+            return;
+        }
+        videoSource = document.querySelector('.lib-video>source');
+        let panel = document.querySelector('.tb-gallery');
+        video.src=videoSource.src;
+        panel.appendChild(div);
+    }
+    function taobao() {
+        let panel = document.querySelector('.tb-item-info-l');
+        panel.appendChild(div);
+    }
+})();
