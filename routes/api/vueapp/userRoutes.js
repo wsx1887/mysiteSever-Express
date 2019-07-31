@@ -1,4 +1,5 @@
 var router = require('express').Router();
+var cookie=require('cookie-parser');
 var userModel = require('../../../models/vueapp/userModel.js');
 
 

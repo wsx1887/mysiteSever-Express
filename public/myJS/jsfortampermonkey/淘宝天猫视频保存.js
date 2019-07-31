@@ -3,7 +3,7 @@
 // @namespace    xxx
 // @version      0.1
 // @description  try to take over the world!
-// @author       You
+// @author       wsx1887
 // @match        taobao.com
 // @match        tmall.com
 // @grant        none
