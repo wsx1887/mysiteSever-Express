@@ -20,10 +20,15 @@
             <br>
             <br>
             <select name="select">
+                <option value="all">图、附替换</option>
                 <option value="imgs">图片替换</option>
                 <option value="attachments">附件替换</option>
             </select>
             <input class="base" type="text" placeholder="以 * 为通配符">
+            <select id="imgtype">
+                <option value="jpg">jpg</option>
+                <option value="png">png</option>
+            </select>
             <br>
             <input type="number" class="start" placeholder="开始数字">
             <input type="number" class="end" placeholder="结束数字">
@@ -45,6 +50,7 @@
         </div>
         <button id="sendemail">发送邮件</button>
     </main>
+    <script src="/myJS/axios/axios.0.19.0.min.js"></script>
     <script>
         (function () {
             //“替换”按钮的单击事件处理
@@ -52,25 +58,34 @@
                 let basestring = document.querySelector('.base').value;
                 let start = document.querySelector('.start').value;
                 let end = document.querySelector('.end').value;
+                {
+                    let imgtypeE = document.getElementById('imgtype');
+                    var imgType = imgtypeE.options[imgtypeE.selectedIndex].value;
+                }
+                let resultImgString = '';
+                let resultAttachString = '';
                 //start,end自动转换为number
-                let resultString = '';
                 for (let i = start; i <= end; i++) {
-                    let tem = '';
+                    let temImgString = '';
+                    let temAttachString = '';
                     if (basestring.indexOf('*') >= 0) {
-                        tem = basestring.replace(/\*/g, i);
+                        temImgString = temAttachString = basestring.replace(/\*/g, i);
                     } else if (basestring.indexOf('part') >= 0) {
-                        if (getSelectValue() == 'imgs') {
-                            tem = basestring.replace(/part\d+/g, `$& (${i})`);
-                        } else {
-                            tem = basestring.replace(/part\d+/g, 'part' + i);
-                        }
+                        temImgString = basestring.replace(/part\d+/g, `$& (${i})`);
+                        temAttachString = basestring.replace(/part\d+/g, 'part' + i);
                     }
-                    resultString += `${tem}\n`;
+                    temImgString += '.' + imgType;
+                    temAttachString += '.rar';
+                    resultImgString += `${temImgString}\n`;
+                    resultAttachString += `${temAttachString}\n`;
                 }
                 if (getSelectValue() == 'imgs') {
-                    document.getElementById('imgs-list').value = resultString;
-                } else {
-                    document.getElementById('attachments-list').value = resultString;
+                    document.getElementById('imgs-list').value = resultImgString;
+                } else if (getSelectValue() == 'attachments') {
+                    document.getElementById('attachments-list').value = resultAttachString;
+                } else if (getSelectValue() == 'all') {
+                    document.getElementById('imgs-list').value = resultImgString;
+                    document.getElementById('attachments-list').value = resultAttachString;
                 }
                 function getSelectValue() {
                     let selectE = document.querySelector('[name="select"]');
@@ -82,16 +97,18 @@
                 let imgsArray = document.getElementById('imgs-list').value.split("\n").filter(item => item.trim().length > 0);
                 let attachmentArray = document.getElementById('attachments-list').value.split("\n").filter(item => item.trim().length > 0);
                 let basepath = document.getElementById('path').value.replace(/\\/g, "/");
+                let sendMessageArray = [];
                 if (basepath[basepath.length - 1] != "/") {
                     basepath += "/";
                 }
                 for (let i = 0; i < attachmentArray.length; i++) {
-                    let message = JSON.parse(JSON.stringify(messageData));
+                    let message = JSON.parse(JSON.stringify(messageModel));
                     message.subject = attachmentArray[i];
                     message.attachments[0] = {
                         path: basepath + attachmentArray[i]
                     };
                     if (imgsArray.length > 0) {
+                        //图片比附件少时轮流使用图片
                         let n = i;
                         while (n > imgsArray.length - 1) {
                             n -= imgsArray.length;
@@ -99,13 +116,21 @@
                         message.html = `<img src="cid:${i}"/>`;
                         message.attachments[1] = {
                             path: basepath + imgsArray[n],
-                            cid: i
+                            cid: i+''
                         };
                     }
+                    sendMessageArray.push(message);
                 }
+                //console.log(sendMessageArray);
+                axios.post('/api/mywork/sendemail', sendMessageArray).then(res => {
+                   // console.log(res);
+                    alert(JSON.stringify(res.data));
+                }).catch(err => {
+                    alert(err);
+                });
             });
 
-            let messageData = {
+            let messageModel = {
                 from: 'wsx1887@qq.com',
                 to: 'wsx1887@qq.com',
                 subject: '',
