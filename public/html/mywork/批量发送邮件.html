@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>批量发送邮件</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="main">
+        <div class="tools">
+            <label>文件基路径：<input id="path" type="text"></label>
+            <br>
+            <br>
+            <select name="select">
+                <option value="imgs">图片替换</option>
+                <option value="attachments">附件替换</option>
+            </select>
+            <input class="base" type="text" placeholder="以 * 为通配符">
+            <br>
+            <input type="number" class="start" placeholder="开始数字">
+            <input type="number" class="end" placeholder="结束数字">
+            <br>
+            <button id="replace">替换</button>
+            <br>
+            <br>
+        </div>
+        <div class="imgs">
+            <label for="imgs-list">邮件内容里的图片（每封一图）</label>
+            <br />
+            <textarea id="imgs-list" cols="70" rows="15" placeholder="数量不需要和附件相等，不够的会重复使用"
+                title="数量不需要和附件相等，不够的会重复使用"></textarea>
+        </div>
+        <div class="attachments">
+            <label for="attachments-list">邮件附件（每封一个）</label>
+            <br />
+            <textarea id="attachments-list" cols="70" rows="15"></textarea>
+        </div>
+        <button id="sendemail">发送邮件</button>
+    </main>
+    <script>
+        (function () {
+            //“替换”按钮的单击事件处理
+            document.getElementById('replace').addEventListener('click', event => {
+                let basestring = document.querySelector('.base').value;
+                let start = document.querySelector('.start').value;
+                let end = document.querySelector('.end').value;
+                //start,end自动转换为number
+                let resultString = '';
+                for (let i = start; i <= end; i++) {
+                    let tem = '';
+                    if (basestring.indexOf('*') >= 0) {
+                        tem = basestring.replace(/\*/g, i);
+                    } else if (basestring.indexOf('part') >= 0) {
+                        if (getSelectValue() == 'imgs') {
+                            tem = basestring.replace(/part\d+/g, `$& (${i})`);
+                        } else {
+                            tem = basestring.replace(/part\d+/g, 'part' + i);
+                        }
+                    }
+                    resultString += `${tem}\n`;
+                }
+                if (getSelectValue() == 'imgs') {
+                    document.getElementById('imgs-list').value = resultString;
+                } else {
+                    document.getElementById('attachments-list').value = resultString;
+                }
+                function getSelectValue() {
+                    let selectE = document.querySelector('[name="select"]');
+                    return selectE.options[selectE.selectedIndex].value;
+                }
+            });
+            //"发送邮件"按钮的单击事件处理
+            document.getElementById('sendemail').addEventListener('click', event => {
+                let imgsArray = document.getElementById('imgs-list').value.split("\n").filter(item => item.trim().length > 0);
+                let attachmentArray = document.getElementById('attachments-list').value.split("\n").filter(item => item.trim().length > 0);
+                let basepath = document.getElementById('path').value.replace(/\\/g, "/");
+                if (basepath[basepath.length - 1] != "/") {
+                    basepath += "/";
+                }
+                for (let i = 0; i < attachmentArray.length; i++) {
+                    let message = JSON.parse(JSON.stringify(messageData));
+                    message.subject = attachmentArray[i];
+                    message.attachments[0] = {
+                        path: basepath + attachmentArray[i]
+                    };
+                    if (imgsArray.length > 0) {
+                        let n = i;
+                        while (n > imgsArray.length - 1) {
+                            n -= imgsArray.length;
+                        }
+                        message.html = `<img src="cid:${i}"/>`;
+                        message.attachments[1] = {
+                            path: basepath + imgsArray[n],
+                            cid: i
+                        };
+                    }
+                }
+            });
+
+            let messageData = {
+                from: 'wsx1887@qq.com',
+                to: 'wsx1887@qq.com',
+                subject: '',
+                html: '',
+                attachments: [{}]
+            };
+        })();
+    </script>
+</body>
+
+</html>
