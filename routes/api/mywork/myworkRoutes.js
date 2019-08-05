@@ -1,5 +1,5 @@
 var router = require('express').Router();
-const fs=require('fs');
+const fs = require('fs');
 //var axios=require('axios');
 
 let sendEmail = require('./methods/sendEmail.js');
@@ -25,15 +25,19 @@ router.post('/sendemail', function (req, res, next) {
           console.log(err);
           res.status(200).send(err);
       }); */
+    if (req.body.password !== 'lqosoxejsxjjbeaf') {
+        res.send({ finishType: 1, message: '授权码不正确' });
+        return;
+    }
     sendEmail.sendEmailOne(req.body).then(info => {
-        res.status(200).send({ finishType: 1, message: '发送成功' });
+        res.status(200).send({ finishType: 0, message: '发送成功' });
     }).catch(err => {
-        res.status(200).send({ finishType: 0, message: err });
+        res.status(200).send({ finishType: 1, message: err });
     });
 });
-router.post('/readdir',function(req,res,next){
-    let dir=req.body.dir;
-    let filePathArray=fs.readdirSync(dir);
+router.post('/readdir', function (req, res, next) {
+    let dir = req.body.dir;
+    let filePathArray = fs.readdirSync(dir);
     res.send(filePathArray);
 });
 module.exports = router;

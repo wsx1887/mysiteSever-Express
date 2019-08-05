@@ -54,6 +54,7 @@
     <main class="main">
         <div class="tools">
             <label>文件基路径：<input id="path" type="text"></label>
+            <button id="scan">自动扫描目录</button>
             <br>
             <br>
             <select name="select">
@@ -85,6 +86,8 @@
             <br />
             <textarea id="attachments-list" cols="70" rows="15"></textarea>
         </div>
+        <label for="password">发邮件权限码：</label>
+        <input type="text" required id="password">
         <button id="sendemail">发送邮件</button>
         <div class="message-contain">
             <div class="sending-message">
@@ -147,10 +150,10 @@
                 let imgsArray = document.getElementById('imgs-list').value.split("\n").filter(item => item.trim().length > 0);
                 let attachmentArray = document.getElementById('attachments-list').value.split("\n").filter(item => item.trim().length > 0);
                 let basepath = document.getElementById('path').value.replace(/\\/g, "/");
-                let sendMessageArray = [];
                 if (basepath[basepath.length - 1] != "/") {
                     basepath += "/";
                 }
+                let sendMessageArray = [];
                 for (let i = 0; i < attachmentArray.length; i++) {
                     let message = JSON.parse(JSON.stringify(messageModel));
                     message.subject = attachmentArray[i];
@@ -178,14 +181,35 @@
                 }).catch(err => {
                     alert(err);
                 }); */
+                let password = document.getElementById('password').value;
                 for (let i = 0; i < sendMessageArray.length; i++) {
-                    let res = await axios.post('/api/mywork/sendemail', sendMessageArray[i]);
+                    let res = await axios.post('/api/mywork/sendemail', { message: sendMessageArray[i], password });
 
                 }
             });
             //消息窗的关闭按钮
             document.getElementById("button-close").addEventListener('click', event => {
                 document.querySelector('.message-contain').style.display = 'none';
+            })
+            //自动扫描目录
+            document.getElementById('scan').addEventListener('click', event => {
+                let basepath = document.getElementById('path').value.replace(/\\/g, "/");
+
+                axios.post('/api/mywork/readdir', { dir: basepath }).then(res => {
+                    if (res.data.length > 0) {
+                        let imgsString = '';
+                        let attachmentString = '';
+                        res.data.forEach(item => {
+                            if (item.substring(item.lastIndexOf('.')) == '.rar') {
+                                attachmentString += `${item}\n`;
+                            } else {
+                                imgsString += `${item}\n`;
+                            }
+                        });
+                        document.getElementById('imgs-list').value = imgsString;
+                        document.getElementById('attachments-list').value = attachmentString;
+                    }
+                });
             })
             let messageModel = {
                 from: 'wsx1887@qq.com',
