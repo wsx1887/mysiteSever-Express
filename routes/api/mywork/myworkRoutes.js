@@ -1,4 +1,5 @@
 var router = require('express').Router();
+const fs=require('fs');
 //var axios=require('axios');
 
 let sendEmail = require('./methods/sendEmail.js');
@@ -30,5 +31,9 @@ router.post('/sendemail', function (req, res, next) {
         res.status(200).send({ finishType: 0, message: err });
     });
 });
-
+router.post('/readdir',function(req,res,next){
+    let dir=req.body.dir;
+    let filePathArray=fs.readdirSync(dir);
+    res.send(filePathArray);
+});
 module.exports = router;
