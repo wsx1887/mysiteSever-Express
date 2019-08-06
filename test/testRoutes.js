@@ -3,7 +3,7 @@ var router = express.Router();
 var http = require('http');
 
 router.get('/', function (req, res, next) {
-    res.send('此链接用于测试');
+    res.send('用于测试');
 })
 router.get('/chlodmanonTest', function (req, res, next) {
     var goodUrl = 'http://chlodmanon.com/product/fggggggg/18';
@@ -62,4 +62,5 @@ router.all('/getreq', function (req, res, next) {
     //console.log(Object.keys(req.body));
     res.send(req.body);
 })
+
 module.exports = router;

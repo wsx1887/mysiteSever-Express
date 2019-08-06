@@ -26,7 +26,7 @@ router.post('/sendemail', function (req, res, next) {
           res.status(200).send(err);
       }); */
     if (req.body.password !== 'lqosoxejsxjjbeaf') {
-        res.send({ finishType: 1, message: '授权码不正确' });
+        res.send({ finishType: 2, message: '授权码不正确' });
         return;
     }
     sendEmail.sendEmailOne(req.body).then(info => {
