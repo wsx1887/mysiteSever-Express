@@ -56,5 +56,9 @@ router.post('/join', function (req, res, next) {
     }
 
 })
+router.post('/login',(req,res,next)=>{
+    let name=req.body.name;
+    let passWord=req.body.passWord;
+})
 
 module.exports = router;

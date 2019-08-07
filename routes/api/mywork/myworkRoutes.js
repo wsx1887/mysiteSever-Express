@@ -29,9 +29,10 @@ router.post('/sendemail', function (req, res, next) {
         res.send({ finishType: 2, message: '授权码不正确' });
         return;
     }
-    sendEmail.sendEmailOne(req.body).then(info => {
+    sendEmail.sendEmailOne(req.body.message).then(info => {
         res.status(200).send({ finishType: 0, message: '发送成功' });
     }).catch(err => {
+        console.log(req.body);
         res.status(200).send({ finishType: 1, message: err });
     });
 });
