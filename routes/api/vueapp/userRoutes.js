@@ -59,6 +59,9 @@ router.post('/join', function (req, res, next) {
 router.post('/login',(req,res,next)=>{
     let name=req.body.name;
     let passWord=req.body.passWord;
+    userModel.find({name,passWord},(err,resArray)=>{
+        if(err){}else if(resArray.length===0){}else{}
+    })
 })
 
 module.exports = router;
