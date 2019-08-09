@@ -1,9 +1,25 @@
 var express = require('express');
 var router = express.Router();
 var http = require('http');
+const jwt=require('jsonwebtoken');
+var userModel=require('../models/vueapp/userModel.js')
 
 router.get('/', function (req, res, next) {
-    res.send('用于测试');
+    //res.send('用于测试');
+    /* let name="wsx1887";
+    let token=jwt.sign({name},'key',{expiresIn:60*60});
+    res.send(token); */
+    userModel.findOne({name:'134'},(err,doc)=>{
+        res.send(doc);
+        console.log(doc);
+    })
+})
+router.get('/check',(req,res,next)=>{
+    jwt.verify(req.query.token,'key',function(err,decode){
+        if(err){
+            console.log(err);
+        }
+    });
 })
 router.get('/chlodmanonTest', function (req, res, next) {
     var goodUrl = 'http://chlodmanon.com/product/fggggggg/18';
