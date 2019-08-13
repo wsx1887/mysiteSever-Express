@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在express中使用cookie</title>
+</head>
+
+<body>
+    <main>
+        <h1>在 express 中使用 cookie</h1>
+        <h3>引入中间件：cookie-parser</h3>
+        <p>cookie-parser 是用于解析请求头中 cookies 的中间件。在 express 中解析后的 cookies 被填充到 req.cookies 里面，如果 cookie 已签名，则使用 req.signedCookies 。如果 express 是使用 express-generator 生成的模板，则默认添加 cookie-parser，否则要手动添加：
+            <pre><code>npm install cookie-parser -S</code></pre>
+        </p>
+        <p>
+            <pre><code>var express = require('express');
+    //引入cookie-parser
+    var cookieParser = require('cookie-parser');
+    var app = express();
+
+    //使用中间件,其中的wsx00k参数用于签名（加密）。不加密则不传入参数。
+    app.use(cookieParser('wsx00k'));
+
+    app.get('/setCookie',(req,res,next) => {
+        /**
+        *设置cookie
+        *参数一：cookie名称
+        *参数二：cookie值
+        *参数三：cookie配置
+            *domain: 域名，{domain:'.baidu.com'},baidu.com域名下的页面都可以访问到当前cookie,如news.baidu.com;music.baidu.com等二级域名均能获取到
+               *name=value：键值对，可以设置要保存的 Key/Value，注意这里的 name 不能和其他属性项的名字一样
+            *Expires： 过期时间（秒），在设置的某个时间点后该 Cookie 就会失效，如 expires=Wednesday,09-Nov-99 23:12:40 GMT
+            *maxAge： 最大失效时间（毫秒），设置在多少后失效
+            *secure： 当 secure 值为 true 时，cookie 在 HTTP 中是无效，在 HTTPS 中才有效
+            *Path： 表示 cookie 只能在当前路径下被访问到，如path:'/getCookie'
+            *httpOnly：默认是false，当为true时，只能服务器端进行获取，JS等前端语言无法获取cookie
+            *singed：用于cookie加密，防止用户在页面篡改设置好的cookie，因为cookie存储本身是明文的。被篡改的cookie 会被服务器拒绝，并且 cookie值会重置为它的原始值。需要用req.signedCookies来进行获取。
+                 当然，你也可以使用其他加密方法，如md5加密等等，先对存储的数据进行加密，然后再进行存储。
+        */
+        res.cookie('name','xiaoming',{maxAge:60000,signed:true})
+        res.send('设置cookie成功')
+    })
+    app.get('/getCookie',(req,res,next) => {
+        //这里会使用cookie-parser解析
+        //获取cookie
+        res.send(req.cookies.name)
+        //获取加密之后的cookie
+        res.send(req.signedCookies.name)
+    })
+    app.listen('8080','127.0.0.1');
+                </code></pre>
+        </p>
+    </main>
+</body>
+
+</html>
