@@ -71,7 +71,7 @@ router.post('/login', (req, res, next) => {
             res.send({ message: '密码错误', messageType: 2 });
         } else {
             let token = jwt.sign({ name }, jwtkey, {
-                expiresIn: 1 * 60 * 60 //一小时过期
+                expiresIn: 1 * 60 * 60//一小时过期
             });
             user.token = token;
             user.save((err, doc) => {
@@ -86,15 +86,15 @@ router.post('/login', (req, res, next) => {
         }
     })
 })
-router.post('/checkout',(req,res,next)=>{
-    
+router.post('/checkout', (req, res, next) => {
+
 })
 
 module.exports = router;
 
 function checkUser(token) {
     return new Promise((resolve, reject) => {
-        userModel.findOne({ token }, 'token', (err, doc) => {
+        userModel.findOne(token, 'token', (err, doc) => {
             if (err || doc == null) {
                 resolve(false);
             } else {

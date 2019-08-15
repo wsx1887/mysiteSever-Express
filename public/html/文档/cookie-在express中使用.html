@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在express中使用cookie</title>
+    <style>
+        table{
+            border: solid 1px #333;
+            border-collapse:collapse;
+        }
+        table caption{
+            text-align:left;
+        }
+        table td,
+        table th{
+            border: solid 1px #666;
+            padding: .25em;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>在 express 中使用 cookie</h1>
+        <h3>引入中间件：cookie-parser</h3>
+        <p>cookie-parser 是用于解析请求头中 cookies 的中间件。在 express 中解析后的 cookies 被填充到 req.cookies 里面，如果 cookie 已签名，则使用
+            req.signedCookies 。如果 express 是使用 express-generator 生成的模板，则默认添加 cookie-parser，否则要手动添加：
+            <pre><code>    npm install cookie-parser -S</code></pre>
+        </p>
+        <h3>实例代码：</h3>
+        <p>
+            <pre><code>    var express = require('express');
+    //引入cookie-parser
+    var cookieParser = require('cookie-parser');
+
+    var app = express();
+
+    //使用中间件,其中的wsx00k参数用于签名（加密）。不加密则不传入参数。
+    app.use(cookieParser('wsx00k'));
+
+    app.get('/setCookie',(req,res,next) => {
+        res.cookie('token','khjfshflhoi8689437oihdfh',{maxAge:1*60*60*1000,signed:true,httpOnly:true})
+        res.send('设置cookie成功')
+    })
+    app.get('/getCookie',(req,res,next) => {
+        //这里会使用cookie-parser解析
+        //获取cookie
+        res.send(req.cookies.name)
+        //获取加密之后的cookie
+        res.send(req.signedCookies.name)
+        //当一个cookie里面既存在加密又存在非加密时，signedCookies和cookies各自取得加密和非加密信息。
+    })
+    app.listen('8080','127.0.0.1');
+                </code></pre>
+        </p>
+        <h3>使用 cookie-parser 获取 cookies</h3>
+        <p>
+                当一个cookie里面既存在加密又存在非加密时，signedCookies和cookies各自取得加密和非加密信息。
+            <pre><code>    req.cookies;
+    req.signedCookies;
+            </code></pre>
+        </p>
+        <h3>express 用于设置cookies的API： res.cookie() </h3>
+        <p>
+            <pre><code>    res.cookie(name, value [, options])</code></pre>
+            <strong>name:</strong>cookies 的键。
+            <br/>
+            <strong>value:</strong>cookies 的键值。
+            <br/>
+            <br/>
+            <table>
+                <caption><strong>options 的属性：</strong></caption>
+                <thead>
+                    <tr>
+                        <th>属性</th>
+                        <th>类型</th>
+                        <th>描述</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>domain</code></td>
+                        <td>String</td>
+                        <td>Cookie的域名，域名下的页面都可以访问到当前cookie，例：'.baidu.com'。默认为应用程序的域名。</td>
+                    </tr>
+                    <tr>
+                        <td><code>encode</code></td>
+                        <td>Function</td>
+                        <td>用于cookie值编码的同步函数。默认为<code>encodeURIComponent</code>。</td>
+                    </tr>
+                    <tr>
+                        <td><code>expires</code></td>
+                        <td>Date</td>
+                        <td>GMT中cookie的到期日，例如：expires: new Date(Date.now() + 900000) 或 expires：Wednesday,09-Nov-99 23:12:40 GMT。如果未指定或设置为0，则创建会话cookie。</td>
+                    </tr>
+                    <tr>
+                        <td><code>httpOnly</code></td>
+                        <td>Boolean</td>
+                        <td>默认是false，当为true时，只能服务器端进行获取，JS等前端语言无法获取cookie</td>
+                    </tr>
+                    <tr>
+                        <td><code>maxAge</code></td>
+                        <td>Number</td>
+                        <td>用于设置相对于当前时间的到期时间（以毫秒为单位）。</td>
+                    </tr>
+                    <tr>
+                        <td><code>path</code></td>
+                        <td>String</td>
+                        <td>表示 cookie 只能在当前路径下被访问到。默认为“/”。</td>
+                    </tr>
+                    <tr>
+                        <td><code>secure</code></td>
+                        <td>Boolean</td>
+                        <td>将cookie标记为仅与HTTPS一起使用。</td>
+                    </tr>
+                    <tr>
+                        <td><code>signed</code></td>
+                        <td>Boolean</td>
+                        <td>指示cookie是否使用签名加密（需要 cookie-parser 支持）。稍后可以通过 req.signedCookie 对象访问此值。</td>
+                    </tr>
+                    <tr>
+                        <td><code>sameSite</code></td>
+                        <td>Boolean 或 String</td>
+                        <td>“SameSite”<strong>Set-Cookie</strong>
+                            属性的值。
+                            更多信息，请访问
+                            <a href="https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00#section-4.1.1" target="_blank">
+                                https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00#section-4.1.1</a>。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+        <h3>删除cookie</h3>
+        <p>使用 express 的函数 <code>res.clearCookie(name[,option])</code>，或者通过设置过期时间，让 cookie 过期，从而间接删除。
+            <pre><code>    res.cookie('token', 'sflhsjdfo7688', { maxAge:0 });</code></pre>
+        </p>
+    </main>
+</body>
+
+</html>

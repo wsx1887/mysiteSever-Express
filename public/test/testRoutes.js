@@ -1,22 +1,18 @@
 var express = require('express');
 var router = express.Router();
 var http = require('http');
-const jwt=require('jsonwebtoken');
-var userModel=require('../models/vueapp/userModel.js')
+const jwt = require('jsonwebtoken');
+var userModel = require('../../models/vueapp/userModel.js')
 
 router.get('/', function (req, res, next) {
-    //res.send('用于测试');
-    /* let name="wsx1887";
-    let token=jwt.sign({name},'key',{expiresIn:60*60});
-    res.send(token); */
-    userModel.findOne({name:'134'},(err,doc)=>{
-        res.send(doc);
-        console.log(doc);
-    })
+    console.log(req.cookies);
+    console.log(req.signedCookies);
+    res.cookie('token', 'dsggd', { maxAge: 60 * 1000, signed: true, httpOnly: true });
+    res.redirect('/test/test.html');
 })
-router.get('/check',(req,res,next)=>{
-    jwt.verify(req.query.token,'key',function(err,decode){
-        if(err){
+router.get('/check', (req, res, next) => {
+    jwt.verify(req.query.token, 'key', function (err, decode) {
+        if (err) {
             console.log(err);
         }
     });
@@ -72,11 +68,14 @@ router.get('/chlodmanonTest', function (req, res, next) {
     //console.log('发送完成');
     //res.json({goodUrl,badUrl});
 });
-router.all('/getreq', function (req, res, next) {
-    //res.append("access-control-allow-origin","*");
-    //console.log(req);
-    //console.log(Object.keys(req.body));
-    res.send(req.body);
+router.all('/test', function (req, res, next) {
+    let token = 'test';
+    token = jwt.sign({ name: 'xubao' }, 'key', { notBefore: 20 });
+    let t;
+    t=jwt.verify(req.cookies.token,'key');
+    console.log(t);
+    res.cookie('token', token);
+    res.end();
 })
 
 module.exports = router;

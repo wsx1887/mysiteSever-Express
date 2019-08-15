@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在node中使用jsonwebtoken进行用户验证</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        table th,
+        table td {
+            border: solid 1px #666;
+            padding: .25em;
+        }
+
+        .pl-1 {
+            padding-left: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>在node中使用jsonwebtoken进行用户验证
+            <br><small>-基于v8.5.1版本</small></h1>
+        <p>jsonwebtoken 是实现 <a href="https://tools.ietf.org/html/rfc7519" target="_blank">JSON Web Tokens</a> 标准的一个中间件。
+        </p>
+        <h2>安装：</h2>
+        <p>
+            <pre><code>    npm install jsonwebtoken -S</code></pre>
+        </p>
+        <div class="content">
+            <h2>使用</h2>
+            <ol>
+                <li>
+                    <h3>签发：jwt.sign(payload, secretOrPrivateKey[, options, callback])</h3>
+                    <p>当提供回调函数时，此方法是异步方法，接收的参数是 err 和 jwt （ jwt.sign 生成的值）。</p>
+                    <p>当不提供回调函数时，此方法是同步方法，返回生成的 jwt 。</p>
+                    <table>
+                        <caption>参数说明：</caption>
+                        <thead>
+                            <tr>
+                                <th>属性</th>
+                                <th>类型</th>
+                                <th>描述</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>payload</td>
+                                <td>String|Buffer|Object</td>
+                                <td>表示负载。当使用过期时间 expiresIn 是，负载必须是一个对象。
+                                    当 payload 不是 Buffer 或 String 时，会自动调用 JSON.stringify 转换成 String 。</td>
+                            </tr>
+                            <tr>
+                                <td>secretOrPrivateKey</td>
+                                <td>String|Buffer|Object</td>
+                                <td>用于加密。</td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">options:</td>
+                            </tr>
+                            <tr>
+                                <td class="pl-1">algorithm</td>
+                                <td></td>
+                                <td>（默认值：HS256）</td>
+                            </tr>
+                            <tr>
+                                <td class="pl-1">expiresIn</td>
+                                <td>String|Number</td>
+                                <td>表示相对于当前，多少时间后过期。格式如：60，"2 days"，"10h"，"7d"。
+                                    当值为 Number 时，单位为“秒”，当值为 String 且不提供单位时，默认为“毫秒”，如"120"等于"120ms"。</td>
+                            </tr>
+                            <tr>
+                                <td class="pl-1">notBefore</td>
+                                <td>String|Number</td>
+                                <td>表示相对于当前，多少时间后 jwt 才有效，在此时间之前的 jwt 都是无效的。格式<strong>同上</strong>。</td>
+                            </tr>
+                            <tr>
+                                <td class="pl-1">audience</td>
+                                <td></td>
+                                <td>受众。详情请参考：<a href="https://tools.ietf.org/html/rfc7519" target="_blank">JSON Web Tokens</a></td>
+                            </tr>
+                            <tr>
+                                <td class="pl-1">issuer</td>
+                                <td></td>
+                                <td>签发人。详情请参考：<a href="https://tools.ietf.org/html/rfc7519" target="_blank">JSON Web Tokens</td>
+                            </tr>
+                            <tr>
+                                <td class="pl-1">jwtid</td>
+                                <td></td>
+                                <td>编号。详情请参考：<a href="https://tools.ietf.org/html/rfc7519" target="_blank">JSON Web Tokens</td>
+                            </tr>
+                            <tr>
+                                <td class="pl-1">subject</td>
+                                <td></td>
+                                <td>主题。详情请参考：<a href="https://tools.ietf.org/html/rfc7519" target="_blank">JSON Web Tokens</td>
+                            </tr>
+                            <tr>
+                                <td class="pl-1">noTimestamp</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="pl-1">header</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="pl-1">keyid</td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="pl-1">mutatePayload</td>
+                                <td>Boolean</td>
+                                <td>如果为true，则sign函数将直接修改有效负载对象。
+                                    如果在应用声明之后但在将其编码为令牌之前需要对有效内容的原始引用，这将非常有用。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <mark>起始时间 iat</mark>
+                </li>
+                <li>
+                    <h3>验证：jwt.verify(token, secretOrPublicKey[, options, callback])</h3>
+                </li>
+                <li>
+                    <h3>取得负载：jwt.decode(token [, options])</h3>
+                </li>
+            </ol>
+        </div>
+    </main>
+</body>
+
+</html>

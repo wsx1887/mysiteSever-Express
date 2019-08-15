@@ -7,7 +7,7 @@ var compression=require('compression');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var testRouter=require('./test/testRoutes.js');
+var testRouter=require('./public/test/testRoutes.js');
 
 var apiRoutes = require("./routes/api/apiRoutes.js");
 
@@ -35,7 +35,7 @@ app.use(compression())
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser('wsxjhju8865'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);

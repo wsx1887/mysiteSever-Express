@@ -54,7 +54,7 @@
     <ul id="menu">
         <li id="express-api"><a href="#express" class="active">express()</a>
             <ul id="express-menu" class="active">
-                <li><em>Methods</em></li>
+                <li><em>方法</em></li>
                 <li id="express-json-middleware"><a href="#express.json" class="">express.json()</a></li>
                 <li id="express-static-middleware"><a href="#express.static" class="">express.static()</a></li>
                 <li id="express-router"><a href="#express.router" class="">express.Router()</a></li>
@@ -64,7 +64,7 @@
         </li>
         <li id="app-api"><a href="#app" class="">Application</a>
             <ul id="app-menu" class="">
-                <li><em>Properties</em>
+                <li><em>属性</em>
                 </li>
                 <li><a href="#app.locals" class="">app.locals</a>
                 </li>
@@ -74,7 +74,7 @@
                 </li>
                 <li><a href="#app.onmount" class="">mount</a>
                 </li>
-                <li><em>Methods</em>
+                <li><em>方法</em>
                 </li>
                 <li><a href="#app.all" class="">app.all()</a>
                 </li>
@@ -118,7 +118,7 @@
         </li>
         <li id="req-api"><a href="#req" class="">Request</a>
             <ul id="req-menu" class="">
-                <li><em>Properties</em>
+                <li><em>属性</em>
                 </li>
                 <li><a href="#req.app" class="">req.app</a>
                 </li>
@@ -160,7 +160,7 @@
                 </li>
                 <li><a href="#req.xhr">req.xhr</a>
                 </li>
-                <li><em>Methods</em>
+                <li><em>方法</em>
                 </li>
                 <li><a href="#req.accepts" class="">req.accepts()</a>
                 </li>
@@ -182,7 +182,7 @@
         </li>
         <li id="res-api"><a href="#res" class="">Response</a>
             <ul id="res-menu" class="">
-                <li><em>Properties</em>
+                <li><em>属性</em>
                 </li>
                 <li><a href="#res.app">res.app </a>
                 </li>
@@ -190,7 +190,7 @@
                 </li>
                 <li><a href="#res.locals" class="">res.locals</a>
                 </li>
-                <li><em>Methods</em>
+                <li><em>方法</em>
                 </li>
                 <li><a href="#res.append" class="">res.append()</a>
                 </li>
@@ -238,7 +238,7 @@
         </li>
         <li id="router-api"><a href="#router" class="">Router</a>
             <ul id="router-menu" class="">
-                <li><em>Methods</em>
+                <li><em>方法</em>
                 </li>
                 <li><a href="#router.all" class="">router.all()</a>
                 </li>
@@ -8072,31 +8072,15 @@
         <section>
             <h3 id="res.attachment">
 
-                res.attachment（[文件名]）
+                res.attachment（[filename]）
 
             </h3>
 
             <p>
-
-                将HTTP响应
-                <code>Content-Disposition</code>
-
-                头字段
-                设置
-                为“attachment”。
-                如果
-                <code>filename</code>
-
-                给出
-                了a
-                ，则它根据扩展名via设置Content-Type
-                <code>res.type()</code>
-
-                ，并设置
-                <code>Content-Disposition</code>
-
-                “filename =”参数。
-
+                将HTTP响应头
+                <code>Content-Disposition</code>字段设置为“attachment”。如果
+                <code>filename</code>指定了路径，则它根据扩展名使用<code>res.type()</code>设置Content-Type，并设置
+                <code>Content-Disposition</code>为“filename=”参数。
             </p>
 
             <pre class="  language-javascript"><code class="  language-javascript">res<span class="token punctuation">.</span><span class="token function">attachment<span class="token punctuation">(</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -8164,11 +8148,7 @@
                 <tbody>
                     <tr>
                         <td><code>domain</code></td>
-                        <td>
-
-                            串
-
-                        </td>
+                        <td>String</td>
                         <td>
 
                             Cookie的域名。
@@ -8178,11 +8158,7 @@
                     </tr>
                     <tr>
                         <td><code>encode</code></td>
-                        <td>
-
-                            函数
-
-                        </td>
+                        <td>Function</td>
                         <td>
 
                             用于cookie值编码的同步函数。
@@ -8195,11 +8171,7 @@
                     </tr>
                     <tr>
                         <td><code>expires</code></td>
-                        <td>
-
-                            日期
-
-                        </td>
+                        <td>Date</td>
                         <td>
 
                             GMT中cookie的到期日。
@@ -8209,11 +8181,7 @@
                     </tr>
                     <tr>
                         <td><code>httpOnly</code></td>
-                        <td>
-
-                            布尔
-
-                        </td>
+                        <td>Boolean</td>
                         <td>
 
                             标记cookie只能由Web服务器访问。
@@ -8222,11 +8190,7 @@
                     </tr>
                     <tr>
                         <td><code>maxAge</code></td>
-                        <td>
-
-                            数
-
-                        </td>
+                        <td>Number</td>
                         <td>
 
                             方便的选项，用于设置相对于当前时间的到期时间（以毫秒为单位）。
@@ -8235,11 +8199,7 @@
                     </tr>
                     <tr>
                         <td><code>path</code></td>
-                        <td>
-
-                            串
-
-                        </td>
+                        <td>String</td>
                         <td>
 
                             Cookie的路径。
@@ -8249,11 +8209,7 @@
                     </tr>
                     <tr>
                         <td><code>secure</code></td>
-                        <td>
-
-                            布尔
-
-                        </td>
+                        <td>Boolean</td>
                         <td>
 
                             将cookie标记为仅与HTTPS一起使用。
@@ -8262,11 +8218,7 @@
                     </tr>
                     <tr>
                         <td><code>signed</code></td>
-                        <td>
-
-                            布尔
-
-                        </td>
+                        <td>Boolean</td>
                         <td>
 
                             指示cookie是否应该签名。
@@ -8275,37 +8227,13 @@
                     </tr>
                     <tr>
                         <td><code>sameSite</code></td>
-                        <td>
-
-                            布尔值或字符串
-
-                        </td>
-                        <td>
-
-                            “SameSite”
-                            <strong>
-
-                                Set-Cookie
-
-                            </strong>
+                        <td>Boolean 或 String</td>
+                        <td>“SameSite”<strong>Set-Cookie</strong>
 
                             属性的值。
                             更多信息，
-                            <a href="https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00#section-4.1.1">
-
-                                请
-
-                            </a>
-
-                            访问<a
-                                href="https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00#section-4.1.1">
-
-                                https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00#section-4.1.1
-
-                            </a>
-                            。
-
-                        </td>
+                            <a href="https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00#section-4.1.1">请访问
+                                https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site-00#section-4.1.1</a>。</td>
                     </tr>
                 </tbody>
             </table>
