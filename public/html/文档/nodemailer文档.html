@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>nodemailer文档</title>
+</head>
+<body>
+    <main>
+        <h1>nodemailer文档</h1>
+        <p>本文档基于 nodemailer v6.3.0 版本。</p>
+        <p>
+            <h3>1、安装</h3>
+            <pre><code>npm install nodemailer --save</code></pre>
+        </p>
+        <p>
+            <h3>2、发送配置</h3>
+            <pre><code>let nodemailer = require('nodemailer');
+let emailTransporter = nodemailer.createTransport({
+    //使用连接池，而不是每封邮件都创建连接。
+    pool: true,
+    host: "smtp.qq.com",
+    port: 465,
+    //使用TLS连接服务器。465端口，一般都要用TLS，而对于端口587或25，请将其保留为false。
+    secure: true,
+    auth: {
+        user:'1658172365@qq.com',
+        //这里是服务器的授权码，而不是账号密码。
+        pass:'*************'
+    }
+});</code></pre>
+        </p>
+        <p>
+            <h3>3、邮件消息格式</h3>
+            <pre><code>let message = {
+    //必须和上面“发送配置”里面的 “user” 相同。
+    from: '1658172365@qq.com',
+    //目标邮箱
+    to: '********@qq.com',
+    //主题
+    subject: '这是一封测试邮件',
+    //邮件主体消息的HTML版本。
+    html: '&lt;p&gt;这是一封测试邮件!&lt;/p&gt;&lt;br/&gt;&lt;img src="cid:url888"/&gt;',
+    //附件，cid 用于将图片添加到消息主体。
+    attachments: [{
+        path:'d:/test.txt'
+    },
+    {
+        path:'d:/img.jpg',
+        cid:'url888'
+    }]
+};</code></pre>
+        </p>
+        <p>
+            <h3>4、发送邮件</h3>
+            <pre><code>emailTransporter.sendMail(message, (err, info) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(info);
+    }
+});</code></pre>
+        </p>
+    </main>
+</body>
+</html>
