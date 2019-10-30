@@ -11,7 +11,7 @@ let emailTransporter = nodemailer.createTransport({
     auth: {
         user:'547873304@qq.com',
         //这里是服务器的授权码，而不是账号密码。
-        pass:'lqosoxejsxjjbeaf'
+        pass:'xx'
     }
 });
 
